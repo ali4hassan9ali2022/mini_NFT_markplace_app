@@ -11,7 +11,7 @@ class CustomBackground extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(Assets.imagesOnBoardingBackground),
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
         ),
         gradient: LinearGradient(
           begin: Alignment(0.64, -0.76),
@@ -19,6 +19,7 @@ class CustomBackground extends StatelessWidget {
           colors: [Color(0xff5c6098), Color(0xff767cb2)],
         ),
       ),
+      child: child,
     );
   }
 }
