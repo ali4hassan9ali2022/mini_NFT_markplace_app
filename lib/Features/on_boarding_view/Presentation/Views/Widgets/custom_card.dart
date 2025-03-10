@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mini_nft_marketplace_app/Core/utils/app_router.dart';
 import 'package:mini_nft_marketplace_app/Core/utils/app_styles.dart';
 import 'package:mini_nft_marketplace_app/Core/widgets/custom_button.dart';
 
@@ -32,7 +34,11 @@ class CustomCard extends StatelessWidget {
                   style: AppStyles.styleRegular10(context),
                 ),
                 const SizedBox(height: 24),
-                CustomButton(),
+                CustomButton(
+                  onPressed: () {
+                    GoRouter.of(context).push(AppRouter.kHomeView);
+                  },
+                ),
               ],
             ),
           ),

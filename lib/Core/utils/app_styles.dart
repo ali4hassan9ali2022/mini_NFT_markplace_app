@@ -38,10 +38,10 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleBold25(context) {
+  static TextStyle styleBold26(context) {
     return TextStyle(
       color: Color(0xffffffff),
-      fontSize: getResponsiveFontSize(context, fontSize: 25),
+      fontSize: getResponsiveFontSize(context, fontSize: 26),
       fontFamily: "SF Pro Display",
       fontWeight: FontWeight.w700,
     );
