@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/Core/utils/app_styles.dart';
 import 'package:mini_nft_marketplace_app/Core/widgets/adaptive_layout.dart';
+import 'package:mini_nft_marketplace_app/Core/widgets/custom_bottom_nvg_bar.dart';
 import 'package:mini_nft_marketplace_app/Features/Home/Presentation/Views/Widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -9,6 +10,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      bottomNavigationBar: CustomBottomNavBar(),
       appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
