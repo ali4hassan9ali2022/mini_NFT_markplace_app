@@ -9,8 +9,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0xff211134),
+        backgroundColor: Colors.transparent,
         centerTitle: true,
         title: Text("NFT Marketplace", style: AppStyles.styleBold26(context)),
       ),

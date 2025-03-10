@@ -6,14 +6,14 @@ import 'package:mini_nft_marketplace_app/Features/Home/Presentation/Views/Widget
 class CustomCategoryListView extends StatelessWidget {
   const CustomCategoryListView({super.key});
   static const items = [
-    CategoryModel(image: Assets.imagesImage2, text: "Music"),
+    CategoryModel(image: Assets.imagesImage2, text: ""),
     CategoryModel(image: Assets.imagesImage1, text: "Art"),
     CategoryModel(image: Assets.imagesImage3, text: "Virtual worlds"),
   ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 180,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: items.length,

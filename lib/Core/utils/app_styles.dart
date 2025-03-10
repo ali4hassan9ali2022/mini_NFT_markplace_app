@@ -56,10 +56,10 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleSemiBold12(context) {
+  static TextStyle styleSemiBold1(context) {
     return TextStyle(
       color: Color(0xffffffff),
-      fontSize: getResponsiveFontSize(context, fontSize: 12),
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: "SF Pro Display",
       fontWeight: FontWeight.w600,
     );
