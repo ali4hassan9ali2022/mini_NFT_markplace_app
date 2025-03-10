@@ -10,7 +10,7 @@ class CustomImage extends StatelessWidget {
     return Stack(
       children: [
         AspectRatio(
-          aspectRatio: 1.95,
+          aspectRatio: 1.29,
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(27),
