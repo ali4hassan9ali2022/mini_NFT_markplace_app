@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/Core/utils/app_styles.dart';
+import 'package:mini_nft_marketplace_app/Core/widgets/adaptive_layout.dart';
 import 'package:mini_nft_marketplace_app/Features/Home/Presentation/Views/Widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,7 +17,11 @@ class HomeView extends StatelessWidget {
         title: Text("NFT Marketplace", style: AppStyles.styleBold26(context)),
       ),
       backgroundColor: Color(0xff211134),
-      body: HomeViewBody(),
+      body: AdaptiveLayout(
+        modileLayOut: (context) => MobileLayout(),
+        tabletLayout: (context) => SizedBox(),
+        desktopLayout: (context) => SizedBox(),
+      ),
     );
   }
 }

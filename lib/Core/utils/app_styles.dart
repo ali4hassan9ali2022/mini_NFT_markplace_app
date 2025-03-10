@@ -52,7 +52,7 @@ abstract class AppStyles {
       color: Color(0xffffffff),
       fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontFamily: "SF Pro Display",
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.bold,
     );
   }
 

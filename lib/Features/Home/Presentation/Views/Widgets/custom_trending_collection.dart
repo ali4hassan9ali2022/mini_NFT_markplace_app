@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mini_nft_marketplace_app/Core/utils/app_styles.dart';
 
 import 'package:mini_nft_marketplace_app/Features/Home/Data/Models/category_model.dart';
+import 'package:mini_nft_marketplace_app/Features/Home/Presentation/Views/Widgets/custom_rating.dart';
 
 class CustomTrendingCollectionsItem extends StatelessWidget {
   const CustomTrendingCollectionsItem({super.key, required this.items});
@@ -34,24 +34,7 @@ class CustomTrendingCollectionsItem extends StatelessWidget {
               ),
               SizedBox(height: 10),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(items.text, style: AppStyles.styleSemiBold1(context)),
-                  Row(
-                    children: [
-                      Icon(Icons.favorite, color: Colors.red, size: 14),
-                      SizedBox(width: 8),
-                      Text(
-                        "200",
-                        style: AppStyles.styleRegular10(
-                          context,
-                        ).copyWith(fontSize: 12),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              CustomRating(items: items),
             ],
           ),
         ),
