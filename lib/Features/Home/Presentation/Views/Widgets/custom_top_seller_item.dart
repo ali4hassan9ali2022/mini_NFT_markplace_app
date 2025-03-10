@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/Core/utils/app_styles.dart';
-import 'package:mini_nft_marketplace_app/Core/utils/assets.dart';
+import 'package:mini_nft_marketplace_app/Features/Home/Data/Models/top_seller_model.dart';
 
 class CustomTopSellerItem extends StatelessWidget {
-  const CustomTopSellerItem({super.key});
-
+  const CustomTopSellerItem({super.key, required this.items});
+  final TopSellerModel items;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -24,7 +24,7 @@ class CustomTopSellerItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(27),
                   image: DecorationImage(
-                    image: AssetImage(Assets.imagesTopSeller1),
+                    image: AssetImage(items.image),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -33,13 +33,13 @@ class CustomTopSellerItem extends StatelessWidget {
             SizedBox(height: 10),
             Align(
               alignment: Alignment.centerLeft,
-              child: Text("Wave", style: AppStyles.styleBold20(context)),
+              child: Text(items.title, style: AppStyles.styleBold20(context)),
             ),
             SizedBox(height: 6),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "Wavepi #5267",
+                items.subTitle,
                 style: AppStyles.styleRegular14(context),
               ),
             ),
@@ -52,7 +52,7 @@ class CustomTopSellerItem extends StatelessWidget {
                     Icon(Icons.earbuds, color: Colors.grey),
                     SizedBox(width: 4),
                     Text(
-                      "0.26",
+                      items.count,
                       style: AppStyles.styleSemiBold16(
                         context,
                       ).copyWith(color: Colors.grey),
@@ -64,7 +64,7 @@ class CustomTopSellerItem extends StatelessWidget {
                     Icon(Icons.favorite_outline, color: Colors.grey),
                     SizedBox(width: 4),
                     Text(
-                      "200",
+                      items.rating,
                       style: AppStyles.styleSemiBold16(
                         context,
                       ).copyWith(color: Colors.grey),
