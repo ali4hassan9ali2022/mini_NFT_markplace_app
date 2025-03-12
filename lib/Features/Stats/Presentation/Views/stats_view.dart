@@ -9,6 +9,7 @@ class StatsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
