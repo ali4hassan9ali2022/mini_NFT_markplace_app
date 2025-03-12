@@ -1,15 +1,15 @@
-
-
-
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:mini_nft_marketplace_app/Core/utils/app_router.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
-  const CustomBottomNavBar({super.key});
-
+  const CustomBottomNavBar({
+    super.key,
+    required this.onPressedHome,
+    required this.onPressedStats,
+  });
+  final Function() onPressedHome;
+  final Function() onPressedStats;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -29,10 +29,18 @@ class CustomBottomNavBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Icon(Icons.home, size: 39, color: Colors.white),
-                  IconButton(onPressed: (){
-                    GoRouter.of(context).push(AppRouter.kStatsView);
-                  }, icon: Icon(Icons.stacked_bar_chart, size: 39, color: Colors.white),),
+                  IconButton(
+                    onPressed: onPressedHome,
+                    icon: Icon(Icons.home, size: 39, color: Colors.white),
+                  ),
+                  IconButton(
+                    onPressed: onPressedStats,
+                    icon: Icon(
+                      Icons.stacked_bar_chart,
+                      size: 39,
+                      color: Colors.white,
+                    ),
+                  ),
                   SizedBox(width: 39),
                   Icon(Icons.search, size: 39, color: Colors.white),
                   Icon(Icons.person, size: 39, color: Colors.white),

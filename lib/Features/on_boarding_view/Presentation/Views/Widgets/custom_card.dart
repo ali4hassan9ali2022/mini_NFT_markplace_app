@@ -36,7 +36,7 @@ class CustomCard extends StatelessWidget {
                 const SizedBox(height: 24),
                 CustomButton(
                   onPressed: () {
-                    GoRouter.of(context).push(AppRouter.kHomeView);
+                    GoRouter.of(context).push(AppRouter.kCustomPageViewView);
                   },
                 ),
               ],
