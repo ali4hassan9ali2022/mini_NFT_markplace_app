@@ -4,6 +4,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mini_nft_marketplace_app/Core/utils/app_router.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({super.key});
@@ -28,7 +30,9 @@ class CustomBottomNavBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Icon(Icons.home, size: 39, color: Colors.white),
-                  Icon(Icons.shop, size: 39, color: Colors.white),
+                  IconButton(onPressed: (){
+                    GoRouter.of(context).push(AppRouter.kStatsView);
+                  }, icon: Icon(Icons.stacked_bar_chart, size: 39, color: Colors.white),),
                   SizedBox(width: 39),
                   Icon(Icons.search, size: 39, color: Colors.white),
                   Icon(Icons.person, size: 39, color: Colors.white),
