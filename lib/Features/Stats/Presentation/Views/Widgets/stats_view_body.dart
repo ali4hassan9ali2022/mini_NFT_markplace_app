@@ -39,6 +39,8 @@ class StatsViewBody extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(height: 27),
+        
       ],
     );
   }

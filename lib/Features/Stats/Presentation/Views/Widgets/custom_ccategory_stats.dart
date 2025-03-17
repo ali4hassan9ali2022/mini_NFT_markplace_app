@@ -28,7 +28,7 @@ class CustomCategoryStats extends StatelessWidget {
               context,
             ).copyWith(color: Colors.white),
           ),
-          Icon(Icons.arrow_drop_down_sharp, color: Colors.white),
+          Icon(Icons.arrow_drop_down_outlined, color: Colors.white),
         ],
       ),
     );
