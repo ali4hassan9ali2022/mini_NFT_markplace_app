@@ -41,5 +41,11 @@ class Assets {
   /// Assets for imagesTrending3
   /// assets/images/trending3.png
   static const String imagesTrending3 = "assets/images/trending3.png";
+  static const String table1 = "assets/images/table1.png";
+  static const String table2 = "assets/images/table2.png";
+  static const String table3 = "assets/images/table3.png";
+  static const String table4 = "assets/images/table4.png";
+  static const String table5 = "assets/images/table5.png";
+  static const String table6 = "assets/images/table6.png";
 }
 

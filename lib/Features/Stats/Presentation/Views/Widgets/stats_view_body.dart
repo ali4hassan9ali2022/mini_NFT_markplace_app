@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/Features/Stats/Presentation/Views/Widgets/custom_ccategory_stats.dart';
 import 'package:mini_nft_marketplace_app/Features/Stats/Presentation/Views/Widgets/custom_table_list_view.dart';
-import 'package:mini_nft_marketplace_app/Features/Stats/Presentation/Views/Widgets/custom_table_stats_item.dart';
 import 'package:mini_nft_marketplace_app/Features/Stats/Presentation/Views/Widgets/tap_bar_list_view.dart';
 
 class StatsViewBody extends StatelessWidget {

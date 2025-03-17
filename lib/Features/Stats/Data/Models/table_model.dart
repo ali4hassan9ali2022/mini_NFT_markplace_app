@@ -1,5 +1,5 @@
 class TableModel {
-  final String image, title, subTitle, count, rating, num;
+  final String image, title, subTitle, count, rating;
 
   const TableModel({
     required this.image,
@@ -7,6 +7,5 @@ class TableModel {
     required this.subTitle,
     required this.count,
     required this.rating,
-    required this.num,
   });
 }
