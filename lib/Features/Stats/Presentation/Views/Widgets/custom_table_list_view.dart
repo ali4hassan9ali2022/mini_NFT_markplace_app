@@ -76,25 +76,13 @@ class CustomTableListView extends StatelessWidget {
       count: "88055.12",
       rating: "3,99%",
     ),
-    TableModel(
-      image: Assets.table5,
-      title: "Bat",
-      subTitle: "view info",
-      count: "10055.06",
-      rating: "3,99%",
-    ),
-    TableModel(
-      image: Assets.table6,
-      title: "Mutant",
-      subTitle: "view info",
-      count: "9095.27",
-      rating: "3,99%",
-    ),
   ];
   static int index = 1;
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.sizeOf(context).height - 310;
     return Container(
+      height: height,
       padding: EdgeInsets.symmetric(vertical: 28.15, horizontal: 14.41),
       decoration: BoxDecoration(
         color: Color(0xff5c6098).withOpacity(0.45),
@@ -102,6 +90,7 @@ class CustomTableListView extends StatelessWidget {
       ),
       child: ListView.builder(
         itemCount: items.length,
+        shrinkWrap: true,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(bottom: 20),

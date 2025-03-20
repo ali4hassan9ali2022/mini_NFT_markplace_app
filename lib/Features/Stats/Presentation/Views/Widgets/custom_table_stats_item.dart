@@ -6,6 +6,7 @@ class CustomTableStatsItem extends StatelessWidget {
   const CustomTableStatsItem({super.key, required this.items, required this.i});
   final TableModel items;
   final int i;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -25,12 +26,18 @@ class CustomTableStatsItem extends StatelessWidget {
             ),
           ],
         ),
-        Expanded(child: SizedBox()),
+
         Column(
           children: [
-            Text(items.count, style: AppStyles.styleSemiBold16(context)),
+            Row(
+              children: [
+                Icon(Icons.insert_link, color: Colors.white),
+                SizedBox(width: 5.41),
+                Text(items.count, style: AppStyles.styleSemiBold16(context)),
+              ],
+            ),
             Text(
-              items.rating,
+              items.rating.toString(),
               style: AppStyles.styleRegular10(
                 context,
               ).copyWith(fontSize: 12, color: Color(0xff34C759)),
